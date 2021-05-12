@@ -154,7 +154,7 @@ if(!isset($_SESSION["user"]))
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <!-- <th>#</th> -->
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Country</th>
@@ -164,6 +164,7 @@ if(!isset($_SESSION["user"]))
 											<th>Check In</th>
 											<th>Check Out</th>
 											<th>Status</th>
+                                            <th>Payment Method</th>
 											<th>More</th>
 											
                                         </tr>
@@ -179,7 +180,7 @@ if(!isset($_SESSION["user"]))
 										if($co=="Not Conform")
 										{
 											echo"<tr>
-												<th>".$trow['id']."</th>
+												
 												<th>".$trow['FName']." ".$trow['LName']."</th>
 												<th>".$trow['Email']."</th>
 												<th>".$trow['Country']."</th>
@@ -189,6 +190,7 @@ if(!isset($_SESSION["user"]))
 												<th>".$trow['cin']."</th>
 												<th>".$trow['cout']."</th>
 												<th>".$trow['stat']."</th>
+                                                <th>".$trow['pay']."</th>
 												
 												<th><a href='roombook.php?rid=".$trow['id']." ' class='btn btn-primary'>Action</a></th>
 												</tr>";

@@ -78,6 +78,7 @@ include('db.php');
 							<li class="menu__item"><a href="#gallery" class="menu__link scroll">Gallery</a></li>
 							<li class="menu__item"><a href="#rooms" class="menu__link scroll">Rooms</a></li>
 							<li class="menu__item"><a href="#contact" class="menu__link scroll">Contact Us</a></li>
+							<li class="menu__item"><a href="#change" class="menu__link scroll">Change</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -167,7 +168,7 @@ include('db.php');
 <!-- //Modal1 -->
 <div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
-	<a href="admin/reservation.php"><h2>ROOM RESERVATION</h2></a>
+	<a href="admin/reservation.php"><h2 style="color:black">ROOM RESERVATION</h2></a>
 </div>
 
 			<div class="clearfix"> </div>
@@ -218,14 +219,14 @@ include('db.php');
 		  <div class="container">
 				   <div class="ab-w3l-spa">
                             <h3 class="title-w3-agileits title-black-wthree">About Our SUN RISE</h3> 
-						   <p class="about-para-w3ls">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, at imperdiet urna</p>
+						   <p class="about-para-w3ls">We offer you the most soothing place and environment to dwell while on vacation or tour, with nothing less and nothing more!!!!</p>
 						   <img src="images/about.jpg" class="img-responsive" alt="Hair Salon">
 										<div class="w3l-slider-img">
 											<img src="images/a1.jpg" class="img-responsive" alt="Hair Salon">
 										</div>
                                        <div class="w3ls-info-about">
 										    <h4>You'll love all the amenities we offer!</h4>
-											<p>Lorem ipsum dolor sit amet, ut magna aliqua. </p>
+											<p>Stay focused and keep relaxed!!!</p>
 										</div>
 		          </div>
 		   	<div class="clearfix"> </div>
@@ -242,7 +243,7 @@ include('db.php');
 			 	<div class="advantage-block ">
 					<i class="fa fa-credit-card" aria-hidden="true"></i>
 			 		<h4>Stay First, Pay After! </h4>
-			 		<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+			 		<p>Do not worry of paying your bills without experiencing our great aura yet.</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Decorated room, proper air conditioned</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Private balcony</p>
 			 		
@@ -252,9 +253,9 @@ include('db.php');
 			 	<div class="advantage-block">
 					<i class="fa fa-clock-o" aria-hidden="true"></i>
 			 		<h4>24 Hour Restaurant</h4>
-			 		<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+			 		<p>Nothing to worry with an empty stomach, we offer 24 hour service for your need to eat</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24 hours room service</p>
-					<p><i class="fa fa-check" aria-hidden="true"></i>24-hour Concierge service</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>24-hour Caretaker service</p>
 			 	</div>
 			 </div>
 			<div class="clearfix"> </div>

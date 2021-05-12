@@ -83,10 +83,10 @@ include('db.php')
 							   <div class="form-group">
                                             <label>Nationality*</label>
                                             <label class="radio-inline">
-                                                <input type="radio" name="nation"  value="Sri Lankan" checked="">Sri Lankan
+                                                <input type="radio" name="nation"  value="Filipino" checked="">Filipino
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" name="nation"  value="Non Sri Lankan ">Non Sri Lankan 
+                                                <input type="radio" name="nation"  value="Non Filipino">Non Filipino 
                                             </label>
                          
                                 </div>
@@ -186,8 +186,22 @@ include('db.php')
                                             <input name="cout" type ="date" class="form-control">
                                             
                                </div>
-                       </div>
-                        
+
+
+                               <div class="form-group">
+                                            <label>Payment Method</label>
+                                            <select name="pay" class="form-control"required>
+												<option value selected ></option>
+                                                <option value="VISA">VISA</option>
+                                                <option value="MASTER CARD">MASTER CARD</option>
+												<option value="GCASH">GCASH</option>
+												<option value="BDO">BDO</option>
+												
+                                                
+                                             
+                                            </select>
+                              </div>
+                               
                     </div>
                 </div>
 				
@@ -224,7 +238,7 @@ include('db.php')
 									else
 									{
 										$new ="Not Conform";
-										$newUser="INSERT INTO `roombook`(`Title`, `FName`, `LName`, `Email`, `National`, `Country`, `Phone`, `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`) VALUES ('$_POST[title]','$_POST[fname]','$_POST[lname]','$_POST[email]','$_POST[nation]','$_POST[country]','$_POST[phone]','$_POST[troom]','$_POST[bed]','$_POST[nroom]','$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'))";
+										$newUser="INSERT INTO `roombook`(`Title`, `FName`, `LName`, `Email`, `National`, `Country`, `Phone`, `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`,`pay`) VALUES ('$_POST[title]','$_POST[fname]','$_POST[lname]','$_POST[email]','$_POST[nation]','$_POST[country]','$_POST[phone]','$_POST[troom]','$_POST[bed]','$_POST[nroom]','$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'),'$_POST[pay]')";
 										if (mysqli_query($con,$newUser))
 										{
 											echo "<script type='text/javascript'> alert('Your Booking application has been sent')</script>";
