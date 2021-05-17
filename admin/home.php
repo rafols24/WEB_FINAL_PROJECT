@@ -45,7 +45,7 @@ if(!isset($_SESSION["user"]))
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="usersetting.php"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i>Rooms</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -373,13 +373,13 @@ if(!isset($_SESSION["user"]))
                                         <div class='modal-body'>
                                             <div class='form-group'>
                                             <label>Change User name</label>
-                                            <input name='usname' value='<?php echo $fname; ?>' class='form-control' placeholder='Enter User name'>
+                                            <input name='usname' value='<?php $fname; ?>' class='form-control' placeholder='Enter User name'>
 											</div>
 										</div>
 										<div class='modal-body'>
                                             <div class='form-group'>
                                             <label>Change Password</label>
-                                            <input name='pasd' value='<?php echo $ps; ?>' class='form-control' placeholder='Enter Password'>
+                                            <input name='pasd' value='<?php $ps;?>' class='form-control' placeholder='Enter Password'>
 											</div>
                                         </div>
 										
