@@ -38,6 +38,7 @@ if(!isset($_SESSION["user"]))
 					$cout = $row['cout'];
 					$sta = $row['stat'];
 					$days = $row['nodays'];
+					$pay = $row['pay'];
 					
 				
 				
