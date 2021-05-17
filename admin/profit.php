@@ -52,7 +52,7 @@ if(!isset($_SESSION["user"]))
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="usersetting.php"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i>Rooms</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -146,7 +146,7 @@ if(!isset($_SESSION["user"]))
                                             <th>Room Rent</th>
 											<th>Bed Rent</th>
 											<th>Meals </th>
-											<th>Gr.Total</th>
+											<th>Total</th>
 											<th>Profit</th>
 											
                                             

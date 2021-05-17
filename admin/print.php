@@ -255,11 +255,11 @@ tr:hover .cut { opacity: 1; }
 		<header>
 			<h1>Invoice</h1>
 			<address >
-				<p>SUN RISE HOTEL,</p>
+				<p>MOON RAYS HOTEL,</p>
 				<p>New Kalmunani Road,<br>Battialoa,<br>Sri Lanka.</p>
 				<p>(+94) 65 222 44 55</p>
 			</address>
-			<span><img alt="" src="assets/img/sun.png"></span>
+			<span style="">MOON RAYS</span>
 		</header>
 		<article>
 			<h1>Recipient</h1>
@@ -330,7 +330,7 @@ tr:hover .cut { opacity: 1; }
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- info@sunrise.com || Web :- www.sunrise.com || Phone :- +94 65 222 44 55 </p>
+				<p align="center">Email :- info@moonrays.com || Web :- www.moonrays.com || Phone :- +94 65 222 44 55 </p>
 			</div>
 		</aside>
 	</body>
