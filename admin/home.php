@@ -284,6 +284,83 @@ if(!isset($_SESSION["user"]))
 									
                                 </div>
                                 <?php
+                                
+
+
+
+                                $rsql = "SELECT * FROM `roombook`";
+								$rre = mysqli_query($con,$rsql);
+								$r =0;
+								while($row=mysqli_fetch_array($rre) )
+								{		
+										$br = $row['stat'];
+										if($br=="Rejected")
+										{
+											$r = $r + 1;
+											
+											
+											
+										}
+										
+								
+								}
+						
+								?>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
+											<button class="btn btn-primary" type="button">
+												 Rejected Booked  <span class="badge"><?php echo $r ; ?></span>
+											</button>
+											
+											</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+										<?php
+										$msql = "SELECT * FROM `roombook`";
+										$mre = mysqli_query($con,$msql);
+										
+										while($mrow=mysqli_fetch_array($mre) )
+										{		
+											$br = $mrow['stat'];
+											if($br=="Rejected")
+											{
+												$fid = $mrow['id'];
+												 
+											echo"<div class='col-md-3 col-sm-12 col-xs-12'>
+													<div class='panel panel-primary text-center no-boder bg-color-blue'>
+														<div class='panel-body'>
+															<i class='fa fa-users fa-5x'></i>
+															<h3>".$mrow['FName']."</h3>
+														</div>
+														<div class='panel-footer back-footer-blue'>
+														<a href=show.php?sid=".$fid ."><button  class='btn btn-primary btn' data-toggle='modal' data-target='#myModal'>
+													Show
+													</button></a>
+															".$mrow['TRoom']."
+														</div>
+													</div>	
+											</div>";
+															
+												
+					
+				
+												
+											}
+											
+									
+										}
+										?>
+                                           
+										</div>
+										
+                                    </div>
+									
+                                </div>
+                                <?php
 								
 								$fsql = "SELECT * FROM `contact`";
 								$fre = mysqli_query($con,$fsql);
