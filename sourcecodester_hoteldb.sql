@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 12, 2021 at 12:20 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.6
+-- Host: 127.0.0.1
+-- Generation Time: May 19, 2021 at 04:20 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,6 +32,7 @@ CREATE TABLE `contact` (
   `fullname` varchar(100) DEFAULT NULL,
   `phoneno` int(10) DEFAULT NULL,
   `email` text DEFAULT NULL,
+  `purpose` varchar(200) NOT NULL,
   `cdate` date DEFAULT NULL,
   `approval` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -41,8 +41,9 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `fullname`, `phoneno`, `email`, `cdate`, `approval`) VALUES
-(1, 'Emelisa Rafols', 2147483647, '19104907@usc.edu.ph', '2021-05-12', 'Allowed');
+INSERT INTO `contact` (`id`, `fullname`, `phoneno`, `email`, `purpose`, `cdate`, `approval`) VALUES
+(1, 'Emelisa Rafols', 2147483647, '19104907@usc.edu.ph', '', '2021-05-12', 'Allowed'),
+(2, 'Marjory Entoma', 2147483647, 'entoma@gmail.com', 'exchange date of book', '2021-05-19', 'Not Allowed');
 
 -- --------------------------------------------------------
 
@@ -234,7 +235,7 @@ ALTER TABLE `roombook`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `login`

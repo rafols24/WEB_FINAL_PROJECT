@@ -50,8 +50,8 @@
 
       </div> <!-- end login -->
 
-    </div><br><br><br><br><br><br><br><br.
-    <div class="bottom">  <h3><a href="../index.php">SUN RISE HOMEPAGE</a></h3></div>
+    </div><br><br>
+    <div class="bottom">  <h3><a href="../index.php">MOONRAYS</a></h3></div>
   
   
 </body>
