@@ -435,7 +435,7 @@ if(!isset($_SESSION["user"]))
             
 			
 				<!-- DEOMO-->
-				<div class='panel-body'>
+				<!-- <div class='panel-body'>
                             <button class='btn btn-primary btn' data-toggle='modal' data-target='#myModal'>
                               Update 
                             </button>
@@ -470,7 +470,7 @@ if(!isset($_SESSION["user"]))
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 				
 				<!--DEMO END-->
 				

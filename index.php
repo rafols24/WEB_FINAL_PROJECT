@@ -168,7 +168,7 @@ include('db.php');
 <!-- //Modal1 -->
 <div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
-	<a href="admin/reservation.php"><h2 style="color:black">ROOM RESERVATION</h2></a>
+	<a href="admin/reservation.php"><h2 style="background-color:black;color:#ffce14">ROOM RESERVATION</h2></a>
 </div>
 
 			<div class="clearfix"> </div>
@@ -496,7 +496,8 @@ include('db.php');
 					<div class="price-block agile">
 						<div class="price-gd-top">
 						<img src="images/r2.jpg" alt=" " class="img-responsive" />
-							<h4>Luxury Room</h4>
+							<h4>Superior
+								 Room</h4>
 						</div>
 						<div class="price-gd-bottom">
 							<div class="price-list">
@@ -689,7 +690,7 @@ include('db.php');
                     <div class="control-group form-group">
                         
                             <label class="contact-p1">Phone Number:</label>
-                            <input type="tel" class="form-control" name="phone" id="phone" required >
+                            <input type="text" class="form-control" name="phone" id="phone" required >
 							<p class="help-block"></p>
 						
                     </div>
@@ -700,6 +701,13 @@ include('db.php');
 							<p class="help-block"></p>
 						
                     </div>
+					<div class="control-group form-group">
+                        
+						<label class="contact-p1">Purpose:</label>
+						<input type="text" class="form-control" name="purpose" id="email" required >
+						<p class="help-block"></p>
+					
+				</div>
                     
                     
                     <input type="submit" name="sub" value="Send Now" class="btn btn-primary">	
@@ -710,8 +718,9 @@ include('db.php');
 					$name =$_POST['name'];
 					$phone = $_POST['phone'];
 					$email = $_POST['email'];
+					$purpose = $_POST['purpose'];
 					$approval = "Not Allowed";
-					$sql = "INSERT INTO `contact`(`fullname`, `phoneno`, `email`,`cdate`,`approval`) VALUES ('$name','$phone','$email',now(),'$approval')" ;
+					$sql = "INSERT INTO `contact`(`fullname`, `phoneno`, `email`, `purpose`, `cdate`,`approval`) VALUES ('$name','$phone','$email','$purpose',now(),'$approval')" ;
 					
 					
 					if(mysqli_query($con,$sql))
@@ -724,7 +733,7 @@ include('db.php');
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
 			<p class="contact-agile1"><strong>Phone :</strong>+94 (65)222-44-55</p>
-			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@SUNRISE.COM</a></p>
+			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@MOONRAYS.COM</a></p>
 			<p class="contact-agile1"><strong>Address :</strong> New Kalmunai Road, Batticaloa, Sri Lanka</p>
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">
