@@ -299,7 +299,7 @@ if(!isset($_SESSION["user"]))
 						?>
 						
 						<?php
-						$csql ="select * from payment";
+						$csql ="select * from room";
 						$cre= mysqli_query($con,$csql);
 						$cr =0 ;
 						$csc =0;
@@ -350,6 +350,7 @@ if(!isset($_SESSION["user"]))
 										echo $f1;
 									}
 									else{
+										
 											echo $f1;
 									}
 								
@@ -575,120 +576,30 @@ if(!isset($_SESSION["user"]))
 											}
 									
                                         
-							}elseif($st=="Rejected"){
+						}elseif($st=="Rejected"){
 								$urb = "UPDATE `roombook` SET `stat`='$st' WHERE id = '$id'";
-								if($f1=="NO" )
-								{
-									echo "<script type='text/javascript'> alert('Sorry! Not Available Superior Room ')</script>";
-								}
-								else if($f2 =="NO")
-									{
-										echo "<script type='text/javascript'> alert('Sorry! Not Available Guest House')</script>";
-										
-									}
-									else if ($f3 == "NO")
-									{
-										echo "<script type='text/javascript'> alert('Sorry! Not Available Single Room')</script>";
-									}
-										else if($f4=="NO")
-										{
-										echo "<script type='text/javascript'> alert('Sorry! Not Available Deluxe Room')</script>";
-										}
-										
-										else if( mysqli_query($con,$urb))
-											{	
-												//echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
-												//echo "<script type='text/javascript'> window.location='home.php'</script>";
-												 $type_of_room = 0;       
-														if($troom=="Superior Room")
-														{
-															$type_of_room = 320;
+
+											
+													
 														
-														}
-														else if($troom=="Deluxe Room")
-														{
-															$type_of_room = 220;
-														}
-														else if($troom=="Guest House")
-														{
-															$type_of_room = 180;
-														}
-														else if($troom=="Single Room")
-														{
-															$type_of_room = 150;
-														}
-														
-														
-														
-														
-														if($bed=="Single")
-														{
-															$type_of_bed = $type_of_room * 1/100;
-														}
-														else if($bed=="Double")
-														{
-															$type_of_bed = $type_of_room * 2/100;
-														}
-														else if($bed=="Triple")
-														{
-															$type_of_bed = $type_of_room * 3/100;
-														}
-														else if($bed=="Quad")
-														{
-															$type_of_bed = $type_of_room * 4/100;
-														}
-														else if($bed=="None")
-														{
-															$type_of_bed = $type_of_room * 0/100;
-														}
-														
-														
-														if($meal=="Room only")
-														{
-															$type_of_meal=$type_of_bed * 0;
-														}
-														else if($meal=="Breakfast")
-														{
-															$type_of_meal=$type_of_bed * 2;
-														}else if($meal=="Half Board")
-														{
-															$type_of_meal=$type_of_bed * 3;
-														
-														}else if($meal=="Full Board")
-														{
-															$type_of_meal=$type_of_bed * 4;
-														}
-														
-														
-														$ttot = $type_of_room * $days * $nroom;
-														$mepr = $type_of_meal * $days;
-														$btot = $type_of_bed *$days;
-														
-														$fintot = $ttot + $mepr + $btot ;
-															
-															//echo "<script type='text/javascript'> alert('$count_date')</script>";
-														$psql = "INSERT INTO `payment`(`id`, `title`, `fname`, `lname`, `troom`, `tbed`, `nroom`, `cin`, `cout`, `ttot`,`meal`, `mepr`, `btot`,`fintot`,`noofdays`) VALUES ('$id','$title','$fname','$lname','$troom','$bed','$nroom','$cin','$cout','$ttot','$meal','$mepr','$btot','$fintot','$days')";
-														
-														if(mysqli_query($con,$psql))
-														{	$notfree="NotFree";
-															$rpsql = "UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' and type='$troom' ";
-															if(mysqli_query($con,$rpsql))
-															{
+														if(mysqli_query($con,$urb))
+														{	
 															echo "<script type='text/javascript'> alert('Booking Rejected')</script>";
 															echo "<script type='text/javascript'> window.location='roombook.php'</script>";
-															}
+															
 															
 															
 														}
 												
-											}
+						}
+					}
 									
 								
-							}
+							
 					
-						}
+						
 					
 									
 									
 							
-						?>
+?>
