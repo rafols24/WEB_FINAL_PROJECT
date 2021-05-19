@@ -64,22 +64,22 @@ if(!isset($_SESSION["user"]))
 
                     <li>
                         <a href="home.php"><i class="fa fa-dashboard"></i> Status</a>
-                    </li>
+                    </li><br><br>
                     <li>
-                        <a class="active-menu" href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                        <a class="active-menu" href="messages.php"><i class="fa fa-desktop"></i> Inqueries</a>
+                    </li><br><br>
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i>Room Booking</a>
-                    </li>
+                    </li><br><br>
                     <li>
                         <a href="Payment.php"><i class="fa fa-qrcode"></i> Payment</a>
-                    </li>
+                    </li><br><br>
                     <li>
                         <a  href="profit.php"><i class="fa fa-qrcode"></i> Profit</a>
-                    </li>
+                    </li><br><br>
                     <li>
                         <a href="logout.php" ><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
+                    </li><br><br>
                     
 
 
@@ -93,7 +93,7 @@ if(!isset($_SESSION["user"]))
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                           News letters<small> panel</small>
+                           Daily Inquiries<small> panel</small>
                         </h1>
                     </div>
                 </div> 

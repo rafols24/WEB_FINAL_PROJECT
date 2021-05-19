@@ -27,8 +27,8 @@
  }
  
  body {
-     background: #2c3338;
-     color: #606468;
+     background: black;
+     color: white;
      font: 87.5%/1.5em 'Open Sans', sans-serif;
      margin: 0;
      overflow-y: auto !important;
@@ -86,9 +86,9 @@
  }
  
  #login form span {
-     background-color: #363b41;
+     background-color: black;
      border-radius: 3px 0px 0px 3px;
-     color: #606468;
+     color: #ee802f;
      display: block;
      float: left;
      height: 50px;
@@ -103,9 +103,9 @@
  
  #login form input[type="text"],
  input[type="password"] {
-     background-color: #3b4148;
+     background-color: #363b41;
      border-radius: 0px 3px 3px 0px;
-     color: #606468;
+     color: #ee802f;
      margin-bottom: 1em;
      padding: 0 16px;
      width: 230px;
@@ -115,8 +115,8 @@
      border-radius: 3px;
      -moz-border-radius: 3px;
      -webkit-border-radius: 3px;
-     background-color: #ea4c88;
-     color: #eee;
+     background-color: #ee802f;
+     color: black;
      font-weight: bold;
      margin-bottom: 2em;
      text-transform: uppercase;
@@ -285,7 +285,7 @@
  }
  
  .bottom h3 {
-     color: black;
+     color: #ee802f;
      font-size: 30px;
      font-weight: bold;
      margin-top: 45px;

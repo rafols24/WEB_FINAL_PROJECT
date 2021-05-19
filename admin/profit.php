@@ -11,7 +11,7 @@ if(!isset($_SESSION["user"]))
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUNRISE HOTEL</title>
+    <title>MOONRAYS HOTEL</title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -70,19 +70,19 @@ if(!isset($_SESSION["user"]))
 
                     <li>
                         <a href="home.php"><i class="fa fa-dashboard"></i> Status</a>
-                    </li>
+                    </li><br><br>
                     <li>
                         <a  href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                    </li><br><br>
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i>Room Booking</a>
-                    </li>
+                    </li><br><br>
                     <li>
                         <a  href="payment.php"><i class="fa fa-qrcode"></i> Payment</a>
-                    </li>
+                    </li><br><br>
 					 <li>
                         <a class="active-menu" href="profit.php"><i class="fa fa-qrcode"></i> Profit</a>
-                    </li>
+                    </li><br><br>
                     
                     <li>
                         <a href="logout.php" ><i class="fa fa-sign-out fa-fw"></i> Logout</a>
