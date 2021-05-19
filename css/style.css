@@ -1241,7 +1241,7 @@ li.menu__item:nth-child(6) {
 /* Hover styles */
 
 .cbp-ig-grid li>.w3_grid_effect:hover {
-    background: #0f2453;
+    background: black;
 }
 
 .cbp-ig-grid li>.w3_grid_effect:hover .cbp-ig-icon {

@@ -200,6 +200,7 @@ if(!isset($_SESSION["user"]))
 											<th>Phone Number</th>
                                             <th>Email</th>
                                             <th>Date</th>
+                                            <th>Purpose</th>
 											<th>Status</th>
 											<th>Approval</th>
 											<th>Remove</th>
@@ -220,7 +221,8 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['fullname']."</td>
 													<td>".$row['phoneno']."</td>
 													<td>".$row['email']."</td>
-													<td>".$row['cdate']."</td>
+                                                    <td>".$row['cdate']."</td>
+                                                    <td>".$row['purpose']."</td>
 													<td>".$row['approval']."</td>
 													<td><a href=newsletter.php?eid=".$id ." <button class='btn btn-primary'> <i class='fa fa-edit' ></i> Permission</button></td>
 													<td><a href=newsletterdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete</button></td>
@@ -232,7 +234,8 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['fullname']."</td>
 													<td>".$row['phoneno']."</td>
 													<td>".$row['email']."</td>
-													<td>".$row['cdate']."</td>
+                                                    <td>".$row['cdate']."</td>
+                                                    <td>".$row['purpose']."</td>
 													<td>".$row['approval']."</td>
 													<td><a href=newsletter.php?eid=".$id." <button class='btn btn-primary'> <i class='fa fa-edit' ></i> Permission</button></td>
 													<td><a href=newsletterdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete </button></td>		
