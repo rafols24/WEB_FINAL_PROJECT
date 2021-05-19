@@ -299,7 +299,7 @@ if(!isset($_SESSION["user"]))
 						?>
 						
 						<?php
-						$csql ="select * from room";
+						$csql ="select * from payment";
 						$cre= mysqli_query($con,$csql);
 						$cr =0 ;
 						$csc =0;
