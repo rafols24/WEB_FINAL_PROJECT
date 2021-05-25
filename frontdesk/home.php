@@ -73,12 +73,9 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a href="payment.php"><i class="fa fa-qrcode"></i> Payment</a>
                     </li><br><br>
-                    <li>
-                        <a  href="checkin.php"><i class="fa fa-qrcode"></i> Check In</a>
-                    </li><br><br>
-                    <li>
+                    <!-- <li>
                         <a  href="profit.php"><i class="fa fa-qrcode"></i> Profit</a>
-                    </li><br><br>
+                    </li><br><br> -->
                     <li>
                         <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
@@ -162,7 +159,6 @@ if(!isset($_SESSION["user"]))
                                             <th>Email</th>
                                             <th>Country</th>
 											<th>Room</th>
-											<th>Bedding</th>
 											<th>Meal</th>
 											<th>Check In</th>
 											<th>Check Out</th>
@@ -188,7 +184,6 @@ if(!isset($_SESSION["user"]))
 												<th>".$trow['Email']."</th>
 												<th>".$trow['Country']."</th>
 												<th>".$trow['TRoom']."</th>
-												<th>".$trow['Bed']."</th>
 												<th>".$trow['Meal']."</th>
 												<th>".$trow['cin']."</th>
 												<th>".$trow['cout']."</th>

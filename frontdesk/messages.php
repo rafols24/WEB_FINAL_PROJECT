@@ -66,24 +66,19 @@ if(!isset($_SESSION["user"]))
                         <a href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li><br><br>
                     <li>
-                        <a  href="messages.php"><i class="fa fa-desktop"></i> Inqueries</a>
+                        <a class="active-menu" href="messages.php"><i class="fa fa-desktop"></i> Inqueries</a>
                     </li><br><br>
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i>Room Booking</a>
                     </li><br><br>
                     <li>
-                        <a class="active-menu" href="payment.php"><i class="fa fa-qrcode"></i> Payment</a>
-                    </li><br><br>
-                    <li>
-                        <a  href="checkin.php"><i class="fa fa-qrcode"></i> Check In</a>
-                    </li><br><br>
-                    <li>
-                        <a  href="profit.php"><i class="fa fa-qrcode"></i> Profit</a>
+                        <a href="Payment.php"><i class="fa fa-qrcode"></i> Payment</a>
                     </li><br><br>
                     <li>
                         <a href="logout.php" ><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
+                    </li><br><br>
                     
+
 
                     
             </div>
@@ -95,13 +90,100 @@ if(!isset($_SESSION["user"]))
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                           Payment Details<small> </small>
+                           Daily Inquiries<small> panel</small>
                         </h1>
                     </div>
                 </div> 
                  <!-- /. ROW  -->
-				 
-				 
+				 <?php
+				include('db.php');
+				$mail = "SELECT * FROM `contact`";
+				$rew = mysqli_query($con,$mail);
+				
+			   ?>
+				 <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron">
+                        <h3>Send The News Letters to Followers</h3>
+						<?php
+						while($rows = mysqli_fetch_array($rew))
+						{
+								$app=$rows['approval'];
+								if($app=="Allowed")
+								{
+									
+								}
+						}
+						?>
+                        <p></p>
+                        <p>
+						<div class="panel-body">
+                            <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal">
+                              Send New News Letters
+                            </button>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Compose News Letter</h4>
+                                        </div>
+										<form method="post">
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                            <label>Title</label>
+                                            <input name="title" class="form-control" placeholder="Enter Title">
+											</div>
+										</div>
+										<div class="modal-body">
+                                            <div class="form-group">
+                                            <label>Subject</label>
+                                            <input name="subject" class="form-control" placeholder="Enter Subject">
+											</div>
+                                        </div>
+										<div class="modal-body">
+										<div class="form-group">
+										  <label for="comment">News</label>
+										  <textarea name="news" class="form-control" rows="5" id="comment"></textarea>
+										</div>
+										 </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											
+                                           <input type="submit" name="log" value="Send" class="btn btn-primary">
+										  </form>
+										   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+							<?php
+							if(isset($_POST['log']))
+							{	
+								$log ="INSERT INTO `newsletterlog`(`title`, `subject`, `news`) VALUES ('$_POST[title]','$_POST[subject]','$_POST[news]')";
+								if(mysqli_query($con,$log))
+								{
+									echo '<script>alert("New Room Added") </script>' ;
+											
+								}
+								
+							}
+							
+								
+							?>
+                          
+                        </p>
+						
+                    </div>
+                </div>
+            </div>
+               <?php
+				
+				$sql = "SELECT * FROM `contact`";
+				$re = mysqli_query($con,$sql);
+				
+			   ?>
             <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
@@ -112,27 +194,19 @@ if(!isset($_SESSION["user"]))
                                     <thead>
                                         <tr>
                                             <th>Name</th>
-											<th>Room type</th>
-                                            <th>Bed Type</th>
-                                            <th>Check in</th>
-											<th>Check out</th>
-											<th>No of Room</th>
-											<th>Meal Type</th>
-											
-                                            <th>Room Rent</th>
-											<th>Bed Rent</th>
-											<th>Meals </th>
-											<th>Gr.Total</th>
-											<th>Print</th>
+											<th>Phone Number</th>
+                                            <th>Email</th>
+                                            <th>Date</th>
+                                            <th>Purpose</th>
+											<th>Status</th>
+											<th>Approval</th>
+											<th>Remove</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
                                         
 									<?php
-										include ('db.php');
-										$sql="select * from payment";
-										$re = mysqli_query($con,$sql);
 										while($row = mysqli_fetch_array($re))
 										{
 										
@@ -141,38 +215,28 @@ if(!isset($_SESSION["user"]))
 											if($id % 2 ==1 )
 											{
 												echo"<tr class='gradeC'>
-													<td>".$row['title']." ".$row['fname']." ".$row['lname']."</td>
-													<td>".$row['troom']."</td>
-													<td>".$row['tbed']."</td>
-													<td>".$row['cin']."</td>
-													<td>".$row['cout']."</td>
-													<td>".$row['nroom']."</td>
-													<td>".$row['meal']."</td>
-													
-													<td>".$row['ttot']."</td>
-													<td>".$row['mepr']."</td>
-													<td>".$row['btot']."</td>
-													<td>".$row['fintot']."</td>
-													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></td>
-													</tr>";
+													<td>".$row['fullname']."</td>
+													<td>".$row['phoneno']."</td>
+													<td>".$row['email']."</td>
+                                                    <td>".$row['cdate']."</td>
+                                                    <td>".$row['purpose']."</td>
+													<td>".$row['approval']."</td>
+													<td><a href=newsletter.php?eid=".$id ." <button class='btn btn-primary'> <i class='fa fa-edit' ></i> Permission</button></td>
+													<td><a href=newsletterdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete</button></td>
+												</tr>";
 											}
 											else
 											{
 												echo"<tr class='gradeU'>
-													<td>".$row['title']." ".$row['fname']." ".$row['lname']."</td>
-													<td>".$row['troom']."</td>
-													<td>".$row['tbed']."</td>
-													<td>".$row['cin']."</td>
-													<td>".$row['cout']."</td>
-													<td>".$row['nroom']."</td>
-													<td>".$row['meal']."</td>
-													
-													<td>".$row['ttot']."</td>
-													<td>".$row['mepr']."</td>
-													<td>".$row['btot']."</td>
-													<td>".$row['fintot']."</td>
-													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></td>
-													</tr>";
+													<td>".$row['fullname']."</td>
+													<td>".$row['phoneno']."</td>
+													<td>".$row['email']."</td>
+                                                    <td>".$row['cdate']."</td>
+                                                    <td>".$row['purpose']."</td>
+													<td>".$row['approval']."</td>
+													<td><a href=newsletter.php?eid=".$id." <button class='btn btn-primary'> <i class='fa fa-edit' ></i> Permission</button></td>
+													<td><a href=newsletterdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete </button></td>		
+												</tr>";
 											
 											}
 										

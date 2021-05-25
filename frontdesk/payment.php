@@ -66,19 +66,13 @@ if(!isset($_SESSION["user"]))
                         <a href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li><br><br>
                     <li>
-                        <a  href="messages.php"><i class="fa fa-desktop"></i> Inqueries</a>
+                        <a  href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
                     </li><br><br>
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i>Room Booking</a>
                     </li><br><br>
                     <li>
                         <a class="active-menu" href="payment.php"><i class="fa fa-qrcode"></i> Payment</a>
-                    </li><br><br>
-                    <li>
-                        <a  href="checkin.php"><i class="fa fa-qrcode"></i> Check In</a>
-                    </li><br><br>
-                    <li>
-                        <a  href="profit.php"><i class="fa fa-qrcode"></i> Profit</a>
                     </li><br><br>
                     <li>
                         <a href="logout.php" ><i class="fa fa-sign-out fa-fw"></i> Logout</a>
