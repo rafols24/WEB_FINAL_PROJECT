@@ -206,7 +206,7 @@ include('db.php');
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_ticket"></span>
 							<h4 class="cbp-ig-title">WIFI COVERAGE</h4>
-						hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh	<span class="cbp-ig-category">MOON RAYS</span>
+						<span class="cbp-ig-category">MOON RAYS</span>
 						</div>
 					</li>
 				</ul>
