@@ -206,7 +206,7 @@ include('db.php');
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_ticket"></span>
 							<h4 class="cbp-ig-title">WIFI COVERAGE</h4>
-							<span class="cbp-ig-category">MOON RAYS</span>
+						<span class="cbp-ig-category">MOON RAYS</span>
 						</div>
 					</li>
 				</ul>
@@ -733,7 +733,7 @@ include('db.php');
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
 			<p class="contact-agile1"><strong>Phone :</strong>+94 (65)222-44-55</p>
-			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@MOONRAYS.COM</a></p>
+			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">phmoonrayshotels@gmail.com</a></p>
 			<p class="contact-agile1"><strong>Address :</strong> New Kalmunai Road, Batticaloa, Sri Lanka</p>
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">

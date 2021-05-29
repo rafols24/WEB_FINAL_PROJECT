@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2021 at 04:20 PM
+-- Generation Time: May 25, 2021 at 04:41 PM
 -- Server version: 10.4.10-MariaDB
--- PHP Version: 7.4.8
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -37,13 +38,24 @@ CREATE TABLE `contact` (
   `approval` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `contact`
+-- Table structure for table `frontlogin`
 --
 
-INSERT INTO `contact` (`id`, `fullname`, `phoneno`, `email`, `purpose`, `cdate`, `approval`) VALUES
-(1, 'Emelisa Rafols', 2147483647, '19104907@usc.edu.ph', '', '2021-05-12', 'Allowed'),
-(2, 'Marjory Entoma', 2147483647, 'entoma@gmail.com', 'exchange date of book', '2021-05-19', 'Not Allowed');
+CREATE TABLE `frontlogin` (
+  `id` int(11) NOT NULL,
+  `usname` varchar(200) NOT NULL,
+  `pass` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `frontlogin`
+--
+
+INSERT INTO `frontlogin` (`id`, `usname`, `pass`) VALUES
+(1, 'jurick', 'jurick');
 
 -- --------------------------------------------------------
 
@@ -62,7 +74,9 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `usname`, `pass`) VALUES
-(4, 'emelisa', 'emelisa');
+(4, 'emelisa', 'emelisa'),
+(5, 'frontdesk', 'frontdesk'),
+(6, 'frontdesk', 'frontdesk');
 
 -- --------------------------------------------------------
 
@@ -121,7 +135,9 @@ INSERT INTO `payment` (`id`, `title`, `fname`, `lname`, `troom`, `tbed`, `nroom`
 (6, 'Miss.', 'loyla', 'Dejito', 'Deluxe Room', 'Triple', 1, '2021-05-15', '2021-05-22', 1540.00, 1678.60, 92.40, 'Breakfast', 46.20, 7),
 (7, 'Miss.', 'Jessa', 'Ortiz', 'Guest House', 'Double', 1, '2021-05-28', '2021-05-29', 180.00, 190.80, 7.20, 'Breakfast', 3.60, 1),
 (10, 'Dr.', 'John Paul', 'vistal', 'Superior Room', 'Double', 1, '2021-05-13', '2021-05-14', 320.00, 339.20, 12.80, 'Breakfast', 6.40, 1),
-(11, 'Miss.', 'Emelisa', 'Rafols', 'Guest House', 'Triple', 1, '2021-05-13', '2021-05-15', 360.00, 403.20, 32.40, 'Half Board', 10.80, 2);
+(11, 'Miss.', 'Emelisa', 'Rafols', 'Guest House', 'Triple', 1, '2021-05-13', '2021-05-15', 360.00, 403.20, 32.40, 'Half Board', 10.80, 2),
+(14, 'Miss.', 'wael', 'hie', 'Deluxe Room', '', 1, '2021-05-29', '2021-05-29', 0.00, 0.00, 0.00, 'Breakfast', 0.00, 0),
+(15, 'Dr.', 'su ', 'tanghon', 'Deluxe Room', '', 1, '2021-05-27', '2021-05-28', 220.00, 220.00, 0.00, 'Room only', 0.00, 1);
 
 -- --------------------------------------------------------
 
@@ -142,21 +158,21 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id`, `type`, `bedding`, `place`, `cusid`) VALUES
-(1, 'Superior Room', 'Single', 'Free', 0),
 (2, 'Superior Room', 'Double', 'NotFree', 10),
 (3, 'Superior Room', 'Triple', 'Free', NULL),
 (4, 'Single Room', 'Quad', 'Free', NULL),
-(5, 'Superior Room', 'Quad', 'NotFree', 5),
+(5, 'Superior Room', 'Quad', 'Free', 0),
 (6, 'Deluxe Room', 'Single', 'Free', NULL),
-(7, 'Deluxe Room', 'Double', 'NotFree', 4),
-(8, 'Deluxe Room', 'Triple', 'NotFree', 6),
+(7, 'Deluxe Room', 'Double', 'Free', 0),
+(8, 'Deluxe Room', 'Triple', 'Free', 0),
 (9, 'Deluxe Room', 'Quad', 'Free', NULL),
 (10, 'Guest House', 'Single', 'Free', NULL),
 (11, 'Guest House', 'Double', 'NotFree', 7),
 (12, 'Guest House', 'Quad', 'Free', NULL),
 (13, 'Single Room', 'Single', 'NotFree', 3),
 (14, 'Single Room', 'Double', 'Free', NULL),
-(15, 'Single Room', 'Triple', 'Free', NULL);
+(15, 'Single Room', 'Triple', 'Free', NULL),
+(16, 'Superior Room', 'Single', 'Free', NULL);
 
 -- --------------------------------------------------------
 
@@ -174,7 +190,6 @@ CREATE TABLE `roombook` (
   `Country` varchar(30) DEFAULT NULL,
   `Phone` text DEFAULT NULL,
   `TRoom` varchar(20) DEFAULT NULL,
-  `Bed` varchar(10) DEFAULT NULL,
   `NRoom` varchar(2) DEFAULT NULL,
   `Meal` varchar(15) DEFAULT NULL,
   `cin` date DEFAULT NULL,
@@ -188,10 +203,15 @@ CREATE TABLE `roombook` (
 -- Dumping data for table `roombook`
 --
 
-INSERT INTO `roombook` (`id`, `Title`, `FName`, `LName`, `Email`, `National`, `Country`, `Phone`, `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`, `stat`, `nodays`, `pay`) VALUES
-(10, 'Dr.', 'John Paul', 'vistal', 'vistal@gmail.com', 'Filipino', 'Belarus', '09875987456', 'Superior Room', 'Double', '1', 'Breakfast', '2021-05-13', '2021-05-14', 'Conform', 1, 'GCASH'),
-(11, 'Miss.', 'Emelisa', 'Rafols', 'emelisarafols@gmail.com', 'Filipino', 'Afghanistan', '09587985698', 'Guest House', 'Triple', '1', 'Half Board', '2021-05-13', '2021-05-15', 'Conform', 2, 'BDO'),
-(12, 'Miss.', 'jessa', 'Ortiz', 'jessa@gmail.com', 'Non Filipino', 'Antigua and Barbuda', '09548965875', 'Deluxe Room', 'Triple', '1', 'Breakfast', '2021-05-14', '2021-05-15', 'Not Conform', 1, 'MASTER CARD');
+INSERT INTO `roombook` (`id`, `Title`, `FName`, `LName`, `Email`, `National`, `Country`, `Phone`, `TRoom`, `NRoom`, `Meal`, `cin`, `cout`, `stat`, `nodays`, `pay`) VALUES
+(10, 'Dr.', 'John Paul', 'vistal', 'vistal@gmail.com', 'Filipino', 'Belarus', '09875987456', 'Superior Room', '1', 'Breakfast', '2021-05-13', '2021-05-14', 'Conform', 1, 'GCASH'),
+(11, 'Miss.', 'Emelisa', 'Rafols', 'emelisarafols@gmail.com', 'Filipino', 'Afghanistan', '09587985698', 'Guest House', '1', 'Half Board', '2021-05-13', '2021-05-15', 'Conform', 2, 'BDO'),
+(12, 'Miss.', 'jessa', 'Ortiz', 'jessa@gmail.com', 'Non Filipino', 'Antigua and Barbuda', '09548965875', 'Deluxe Room', '1', 'Breakfast', '2021-05-14', '2021-05-15', 'Rejected', 1, 'MASTER CARD'),
+(13, 'Dr.', 'wael', 'hie', 'hie@gmail.com', 'Non Filipino', 'Belarus', '09876543212', 'Superior Room', '1', 'Breakfast', '2021-05-26', '2021-05-27', 'Rejected', 1, 'VISA'),
+(14, 'Miss.', 'wael', 'hie', 'emelisas@gmail.com', 'Filipino', 'Algeria', '09876543212', 'Deluxe Room', '1', 'Breakfast', '2021-05-29', '2021-05-29', 'Conform', 0, 'VISA'),
+(15, 'Dr.', 'su ', 'tanghon', 'tanghon@gmail.com', 'Filipino', 'Philippines', '09876543212', 'Deluxe Room', '1', 'Room only', '2021-05-27', '2021-05-28', 'Conform', 1, 'MASTER CARD'),
+(16, 'Miss.', 'ruby', 'hern', 'hern@gmail.com', 'Non Filipino', 'Belgium', '09876543212', 'Superior Room', '1', 'Room only', '2021-05-26', '2021-05-27', 'Rejected', 1, 'GCASH'),
+(17, 'Miss.', 'angelica', 'manlapaz', 'angelica@gmail.com', 'Non Filipino', 'Antigua and Barbuda', '09876765432', 'Guest House', '1', 'Half Board', '2021-05-26', '2021-05-28', 'Rejected', 2, 'GCASH');
 
 --
 -- Indexes for dumped tables
@@ -201,6 +221,12 @@ INSERT INTO `roombook` (`id`, `Title`, `FName`, `LName`, `Email`, `National`, `C
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `frontlogin`
+--
+ALTER TABLE `frontlogin`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -238,10 +264,16 @@ ALTER TABLE `contact`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `frontlogin`
+--
+ALTER TABLE `frontlogin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `newsletterlog`
@@ -253,13 +285,13 @@ ALTER TABLE `newsletterlog`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `roombook`
 --
 ALTER TABLE `roombook`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

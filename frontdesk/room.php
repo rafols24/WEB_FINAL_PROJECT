@@ -61,10 +61,10 @@ if(!isset($_SESSION["user"]))
 
                     <li>
                         <a  href="settings.php"><i class="fa fa-dashboard"></i>Rooms Status</a>
-                    </li><br><Br>
+                    </li>
 					<li>
                         <a  class="active-menu" href="room.php"><i class="fa fa-plus-circle"></i>Add Room</a>
-                    </li><br><br>
+                    </li>
                     <li>
                         <a  href="roomdel.php"><i class="fa fa-desktop"></i> Delete Room</a>
                     </li>
@@ -108,6 +108,20 @@ if(!isset($_SESSION["user"]))
 												<option value="Single Room">SINGLE ROOM</option>
                                             </select>
                               </div>
+							  
+								<!-- <div class="form-group">
+                                            <label>Bedding Type</label>
+                                            <select name="bed" class="form-control" required>
+												<option value selected ></option>
+                                                <option value="Single">Single</option>
+                                                <option value="Double">Double</option>
+												<option value="Triple">Triple</option>
+                                                <option value="Quad">Quad</option>
+												<option value="Triple">None</option>
+                                                                                             
+                                            </select>
+                                            
+                               </div> -->
 							 <input type="submit" name="add" value="Add New" class="btn btn-primary"> 
 							</form>
 							<?php
