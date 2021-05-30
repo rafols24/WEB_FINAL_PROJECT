@@ -1445,7 +1445,7 @@ p.about-para-w3ls {
 /*-- team --*/
 
 .tab1 .team-img-w3-agile {
-    background: url(../images/teamb1.jpg)no-repeat 0px 0px;
+    background: url(../images/rafols.png)no-repeat 0px 0px;
 }
 
 .tab2 .team-img-w3-agile {
@@ -1596,10 +1596,10 @@ ul.resp-tabs-list {
 
 .price-selet a {
     font-size: 0.9em;
-    color: #000000;
+    color: #ffce14;
     display: inline-block;
     padding: 0.5em 2em;
-    background: #ffce14;
+    background: black;
     text-decoration: none;
     border: 2px solid #ecbf11;
 }

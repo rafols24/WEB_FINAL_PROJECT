@@ -10,7 +10,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>SUN RISE FRONTDESK</title>
+  <title>MOONRAYS FRONTDESK</title>
   
   
      
