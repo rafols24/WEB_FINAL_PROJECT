@@ -159,7 +159,7 @@ include('db.php');
 										<h4>MOON  <span>RAYS</span></h4>
 										<img src="images/1.jpg" alt=" " class="img-responsive">
 										<h5>We know what you love</h5>
-										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes Star Hotel one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
+										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes Moon Rays Hotel one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
 									</div>
 								</div>
 							</div>
@@ -341,7 +341,7 @@ include('db.php');
 					<div class="col-md-4">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Rubylyn hernani</h4>
+							<h4>Wael Hie</h4>
 							<span>Receptionist</span>
 							<p>Our hotel has the best place to offer. We have the warmest people who are willing to serve you.</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">

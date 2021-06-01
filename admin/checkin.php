@@ -7,7 +7,7 @@ if (!isset($_SESSION["user"])) {
 
 
 <?php
-$dbhandle= new mysqli("localhost", "root", "", "sourcecodester_hoteldb");
+$dbhandle= new mysqli("localhost", "root", "", "hoteldb");
 echo $dbhandle->connect_error;
  $query = "SELECT troom,count(*) as nroom FROM payment GROUP BY troom";
 $res = $dbhandle->query($query);
