@@ -181,7 +181,6 @@ if(!isset($_SESSION["user"]))
                                         <tr>
                                             <th>Room ID</th>
                                             <th>Room Type</th>
-											<th>Bedding</th>
                                             
                                         </tr>
                                     </thead>
@@ -196,7 +195,6 @@ if(!isset($_SESSION["user"]))
 												echo "<tr class=odd gradeX>
 													<td>".$row['id']."</td>
 													<td>".$row['type']."</td>
-												   <th>".$row['bedding']."</th>
 												</tr>";
 											}
 											else
@@ -204,7 +202,6 @@ if(!isset($_SESSION["user"]))
 												echo"<tr class=even gradeC>
 													<td>".$row['id']."</td>
 													<td>".$row['type']."</td>
-												   <th>".$row['bedding']."</th>
 												</tr>";
 											
 											}

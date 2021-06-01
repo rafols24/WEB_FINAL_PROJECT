@@ -30,8 +30,6 @@ if(!isset($_SESSION["user"]))
 					$country = $row['Country'];
 					$Phone = $row['Phone'];
 					$troom = $row['TRoom'];
-					$nroom = $row['NRoom'];
-					$bed = $row['Bed'];
 					$non = $row['NRoom'];
 					$meal = $row['Meal'];
 					$cin = $row['cin'];
@@ -199,20 +197,10 @@ if(!isset($_SESSION["user"]))
                                             
                                         </tr>
 										<tr>
-                                            <th>No Of the Room </th>
-                                            <th><?php echo $nroom; ?></th>
-                                            
-                                        </tr>
-										<tr>
                                             <th>Meal Plan </th>
                                             <th><?php echo $meal; ?></th>
                                             
                                         </tr>
-										<!-- <tr>
-                                            <th>Bedding </th>
-                                            <th><?php echo $bed; ?></th>
-                                            
-                                        </tr> -->
 										<tr>
                                             <th>Check-in Date </th>
                                             <th><?php echo $cin; ?></th>
