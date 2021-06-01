@@ -78,7 +78,6 @@ include('db.php');
 							<li class="menu__item"><a href="#gallery" class="menu__link scroll">Gallery</a></li>
 							<li class="menu__item"><a href="#rooms" class="menu__link scroll">Rooms</a></li>
 							<li class="menu__item"><a href="#contact" class="menu__link scroll">Contact Us</a></li>
-							<li class="menu__item"><a href="#change" class="menu__link scroll">Change</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -271,7 +270,7 @@ include('db.php');
 			<div id="horizontalTab">
 					<ul class="resp-tabs-list">
 					<li>
-						<img src="images/teams1.jpg" alt=" " class="img-responsive" />
+						<img src="images/rafols.png" alt=" " class="img-responsive" />
 					</li>
 					<li>
 						<img src="images/teams2.jpg" alt=" " class="img-responsive" />
@@ -285,12 +284,12 @@ include('db.php');
 					</ul>
 					<div class="resp-tabs-container">
 					<div class="tab1">
-						<div class="col-md-6 team-img-w3-agile">
+						<div class="col-md-4">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Lucas Jimenez</h4>
+							<h4>Emelisa Rafols</h4>
 							<span>Manager</span>
-							<p></p>
+							<p>I assure you a hundred percent well deserve stay!!!</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
@@ -303,10 +302,10 @@ include('db.php');
 						<div class="clearfix"> </div>
 					</div>
 					<div class="tab2">
-					<div class="col-md-6 team-img-w3-agile">
+					<div class="col-md-4">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Sarah Connor</h4>
+							<h4>Jessa Ortiz</h4>
 							<span>Receptionist</span>
 							<p>Come and stay, we will give you the best place to enjoy and relax.</p>	
 						<div class="social-bnr-agileits footer-icons-agileinfo">
@@ -321,10 +320,10 @@ include('db.php');
 						<div class="clearfix"> </div>
 					</div>
 					<div class="tab3">
-						<div class="col-md-6 team-img-w3-agile">
+						<div class="col-md-4">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Ivan Simpson</h4>
+							<h4>Jurick Anthony</h4>
 							<span>Manager</span>
 							<p>We provide best experience to all our customers. Come and stay with us.</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
@@ -339,10 +338,10 @@ include('db.php');
 						<div class="clearfix"> </div>
 					</div>
 					<div class="tab4">
-					<div class="col-md-6 team-img-w3-agile">
+					<div class="col-md-4">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Marc Gutierrez</h4>
+							<h4>Rubylyn hernani</h4>
 							<span>Receptionist</span>
 							<p>Our hotel has the best place to offer. We have the warmest people who are willing to serve you.</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
@@ -734,7 +733,7 @@ include('db.php');
 			<h4>Connect With Us</h4>
 			<p class="contact-agile1"><strong>Phone :</strong>+94 (65)222-44-55</p>
 			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">phmoonrayshotels@gmail.com</a></p>
-			<p class="contact-agile1"><strong>Address :</strong> New Kalmunai Road, Batticaloa, Sri Lanka</p>
+			<p class="contact-agile1"><strong>Address :</strong>Sri Lanka</p>
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">
 				<ul class="social-icons3">
@@ -744,7 +743,6 @@ include('db.php');
 								
 							</ul>
 			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7905052320443!2d-77.84987248482734!3d39.586871613613056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9f6a80ccf0661%3A0x7210426c67abc40!2sVirginia+Welcome+Center%2FSafety+Rest+Area!5e0!3m2!1sen!2sin!4v1485760915662" ></iframe>
 		</div>
 		<div class="clearfix"></div>
 	</div>
