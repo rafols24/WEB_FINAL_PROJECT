@@ -135,14 +135,14 @@ include('db.php')
 												<option value="Single Room">SINGLE ROOM</option>
                                             </select>
                               </div>
-							
+<!-- 							
 							  <div class="form-group">
                                             <label>No.of Rooms *</label>
                                             <select name="nroom" class="form-control" required>
 												<option value selected ></option>
                                                 <option value="1">1</option>
                                             </select>
-                              </div>
+                              </div> -->
 							 
 							 
 							  <div class="form-group">

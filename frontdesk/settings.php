@@ -251,7 +251,7 @@ if(!isset($_SESSION["user"]))
 						<table width="200px">
 							
 							<tr>
-								<td><b>Superior Room</b></td>
+								<td><b>Superior Room	 </b></td>
 								<td><button type="button" class="btn btn-primary btn-circle"><?php  
 									$f1 =$sc - $csc;
 									if($f1 <=0 )
@@ -336,7 +336,7 @@ if(!isset($_SESSION["user"]))
 					</div>
                 </div>
                 <!-- /. ROW 
-                /. ROW  -->
+                <!-- /. ROW  -->
                 
                                 
                   

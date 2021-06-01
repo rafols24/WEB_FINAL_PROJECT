@@ -162,7 +162,6 @@ if(!isset($_SESSION["user"]))
                                             <th>Email</th>
                                             <th>Country</th>
 											<th>Room</th>
-											<th>Bedding</th>
 											<th>Meal</th>
 											<th>Check In</th>
 											<th>Check Out</th>
@@ -188,7 +187,6 @@ if(!isset($_SESSION["user"]))
 												<th>".$trow['Email']."</th>
 												<th>".$trow['Country']."</th>
 												<th>".$trow['TRoom']."</th>
-												<th>".$trow['Bed']."</th>
 												<th>".$trow['Meal']."</th>
 												<th>".$trow['cin']."</th>
 												<th>".$trow['cout']."</th>
